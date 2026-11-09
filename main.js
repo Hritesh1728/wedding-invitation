@@ -49,7 +49,7 @@ var MAPBOX_TOKEN = 'pk.eyJ1IjoiaHJpdGVzaC1zYWluaSIsImEiOiJjbXZ4Z2Z0bncwZmV2NGRzO
     if (extra <= 2){ st.style.setProperty('--cs',1); st.style.setProperty('--ts',1); st.style.setProperty('--ty','0px'); return; }
     var cs = Math.min(1.42, 1 + (extra * 0.55) / (323 * u));
     var ts = Math.min(1.2, 1 + (extra * 0.3) / (255 * u));
-    var gap = H - 323 * u * cs - 86 * u - 290 * u * ts - 14 * u;   /* free space between text and couple */
+    var gap = H - 323 * u * cs - 86 * u - 308 * u * ts - 14 * u;   /* free space between text and couple */
     var ty = Math.max(0, gap * 0.35);
     st.classList.toggle('roomy', gap > 60 * u);
     st.style.setProperty('--cs', cs.toFixed(3)); st.style.setProperty('--ts', ts.toFixed(3)); st.style.setProperty('--ty', ty.toFixed(1) + 'px');

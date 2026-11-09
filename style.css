@@ -532,3 +532,15 @@ a,button{-webkit-tap-highlight-color:transparent}
   *,*::before,*::after{animation:none!important;transition:none!important}
   .js .rv{opacity:1;transform:none}
 }
+
+/* "Wedding Invitation" labels */
+.gate-title{position:absolute;left:0;right:0;top:6.5%;margin:0;text-align:center;font:normal 2.6em/1 var(--script);color:#f3d79a;text-shadow:0 .05em .3em #0008;pointer-events:none}
+.gate.opening .gate-title{transition:opacity .6s;opacity:0}
+.wi{display:flex;align-items:center;justify-content:center;gap:calc(var(--u) * 8);margin-top:calc(var(--u) * 8)!important;font:600 calc(var(--u) * 10.5)/1 var(--ui);letter-spacing:.32em;text-transform:uppercase;color:#a3192d;padding-left:.32em}
+.wi i{display:block;width:calc(var(--u) * 26);height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
+.wi i:last-child{background:linear-gradient(270deg,transparent,var(--gold))}
+.names{margin-top:calc(var(--u) * 5)}
+.ctext .f.wi{transition-delay:1.3s}
+.ctext .f.date{transition-delay:3s}
+.ctext .f.addr{transition-delay:3.25s}
+.ctext .f.hero-orn{transition-delay:3.5s}
