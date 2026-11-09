@@ -539,8 +539,27 @@ a,button{-webkit-tap-highlight-color:transparent}
 .wi{display:flex;align-items:center;justify-content:center;gap:calc(var(--u) * 8);margin-top:calc(var(--u) * 8)!important;font:600 calc(var(--u) * 10.5)/1 var(--ui);letter-spacing:.32em;text-transform:uppercase;color:#a3192d;padding-left:.32em}
 .wi i{display:block;width:calc(var(--u) * 26);height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
 .wi i:last-child{background:linear-gradient(270deg,transparent,var(--gold))}
-.names{margin-top:calc(var(--u) * 5)}
 .ctext .f.wi{transition-delay:1.3s}
 .ctext .f.date{transition-delay:3s}
 .ctext .f.addr{transition-delay:3.25s}
 .ctext .f.hero-orn{transition-delay:3.5s}
+
+/* wide screens: date and venue move into the side panels so the centre stays clear of the couple */
+.side-info{position:absolute;top:50%;z-index:3;width:calc(var(--u) * 240);max-width:calc(50% - var(--u) * 352 - 24px);transform:translateY(-50%);text-align:center;color:var(--red)}
+.side-info p{margin:0}
+.side-info .si-k{font:normal calc(var(--u) * 26)/1 var(--script);color:var(--vermilion)}
+.side-info .si-big{font:600 calc(var(--u) * 40)/1.1 var(--head);color:var(--red);margin-top:calc(var(--u) * 8)}
+.side-info .si-big sup{font-size:.45em;vertical-align:.9em}
+.side-info .si-txt{font:500 calc(var(--u) * 15)/1.35 var(--body);color:var(--red);margin-top:calc(var(--u) * 4)}
+.side-info .si-sub{font:500 calc(var(--u) * 10.5)/1.4 var(--ui);letter-spacing:.22em;text-transform:uppercase;color:#7a5a4a;margin-top:calc(var(--u) * 8)}
+.side-info::before,.side-info::after{content:"";display:block;width:calc(var(--u) * 70);height:1px;margin:calc(var(--u) * 12) auto;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.js .hero:not(.live) .side-info{opacity:0}
+.side-info{transition:opacity 1.2s 3s}
+.names{margin-top:calc(var(--u) * 9)}
+@media (min-width:900px) and (min-height:560px) and (min-aspect-ratio:1/1){
+  .stage .side-info.wide-only{display:block!important}
+  .side-info.l{left:calc(var(--u) * 206 + (50% - var(--u) * 352) / 2);transform:translate(-50%,-50%)}
+  .side-info.r{right:calc(var(--u) * 206 + (50% - var(--u) * 352) / 2);transform:translate(50%,-50%)}
+  .ctext .date,.ctext .addr{display:none}
+  .ctext{transform:translateX(-50%) scale(1.06)}
+}
